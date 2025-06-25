@@ -4,9 +4,14 @@ import string
 # String is no Function but a Modul from the pyhton standard library
 # I guess the Subject is wrong try the String echo -n "" | wc  -> 170 chars
 
+# Or with Copying the - gets Deleted because \n is expected but not used idk
+
 
 def building():
-    """Main Function"""
+    """
+    This Function Prints the contens (elements)
+    of a given String from the cli
+    """
     argc = len(sys.argv)
     argv = sys.argv
 
@@ -15,7 +20,7 @@ def building():
     if (argc != 2):
         print("What is the text to count?")
         try:
-            user_input = input()
+            user_input = input() + "\n"
         except EOFError:
             print("\nEnd of input (Ctrl+D) detected.")
             return
@@ -39,7 +44,7 @@ def building():
             lowercase_num += 1
         if char in string.digits:
             digit_num += 1
-        if char == " ":
+        if char == " " or char == "\n":
             spaces_num += 1
 
     print(f"The text contains {all_chars} characters:")
@@ -50,5 +55,9 @@ def building():
     print(f"{digit_num} digits")
 
 
-if __name__ == "__main__":
+def main():
     building()
+
+
+if __name__ == "__main__":
+    main()

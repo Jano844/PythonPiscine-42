@@ -3,9 +3,10 @@ import shutil
 
 
 def ft_tqdm(lst):
+    """Prints loading Progress bar"""
     total = len(lst)
     columns, rows = shutil.get_terminal_size()
-    print(columns)
+    # print(columns)
     bar_length = columns - 41
     for i, item in enumerate(lst):
         progress = (i + 1) / total

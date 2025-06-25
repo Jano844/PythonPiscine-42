@@ -20,6 +20,11 @@ def ft_filter(function, iterable):
                 yield item
 
 
+def is_even(n):
+    """Returns true if even"""
+    return n % 2 == 0
+
+
 def main():
     """
     Checks the user Input
@@ -38,8 +43,10 @@ def main():
         return
 
     result = list(ft_filter(lambda word: func(word, n), string_arg.split()))
-
     print(result)
+
+    data = [0, 1, 2, 3, 4, 5]
+    print(list(ft_filter(is_even, data)))
 
 
 if __name__ == "__main__":

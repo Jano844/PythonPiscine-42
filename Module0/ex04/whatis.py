@@ -3,9 +3,12 @@ import sys
 def main():
 	argc = len(sys.argv)
 	argv = sys.argv
-	if (argc != 2):
+	if (argc > 2):
 		print(f"AssertionError: more than one argument is provided")
 		return(1)
+	
+	if argc == 1:
+		return
 	
 	try:
 		num = int(argv[1])

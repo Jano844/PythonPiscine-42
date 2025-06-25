@@ -1,6 +1,6 @@
 
 
-def is_longer_than_n(word, n):
+def is_longer_than_n(word: str, n: int):
     """If word has more than 4 characters return true"""
     return len(word) > n
 
