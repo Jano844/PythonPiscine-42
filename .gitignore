@@ -2,6 +2,8 @@
 
 **/venv/
 
-*.csv
+**/*.csv
 
-*.png
+**/*.png
+
+**/.DS_Store
